@@ -1,10 +1,14 @@
 import './App.css';
-import React from 'react';
+import React, { Fragment } from 'react';
 import AddTodo from './containers/AddTodo';
+import TodoList from './containers/TodoList';
 
 const App: React.FC = () => {
   return (
-    <AddTodo />
+    <Fragment>
+      <AddTodo />
+      <TodoList />
+    </Fragment>
   );
 }
 export default App;
