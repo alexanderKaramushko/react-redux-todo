@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { Props } from '../../containers/AddTodo/types';
 import { addTodo } from '../../store/todos/actions';
+import { Props } from './types';
 import { Todo } from '../../store/todos/types';
 
 const AddTodo = (props: Props) => {
