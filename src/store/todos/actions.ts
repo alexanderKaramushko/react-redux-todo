@@ -1,4 +1,4 @@
-import { ADD_TODO } from "./constants";
+import { ADD_TODO, TOGGLE_TODO } from "./constants";
 import { todoActionsTypes, Todo } from "./types";
 
 const addTodo = (todo: Todo): todoActionsTypes => ({
@@ -6,6 +6,12 @@ const addTodo = (todo: Todo): todoActionsTypes => ({
     payload: todo
 });
 
+const toggleTodo = (id: number): todoActionsTypes => ({
+    type: TOGGLE_TODO,
+    id
+});
+
 export {
-    addTodo
+    addTodo,
+    toggleTodo
 };
