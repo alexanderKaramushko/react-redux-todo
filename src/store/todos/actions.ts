@@ -6,7 +6,7 @@ const addTodo = (todo: Todo): todoActionsTypes => ({
     payload: todo
 });
 
-const toggleTodo = (id: number): todoActionsTypes => ({
+const toggleTodo = (id: Todo["id"]): todoActionsTypes => ({
     type: TOGGLE_TODO,
     id
 });

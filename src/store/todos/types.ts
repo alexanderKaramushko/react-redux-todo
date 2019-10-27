@@ -17,7 +17,7 @@ interface AddTodo {
 
 export interface ToggleTodo {
     type: typeof TOGGLE_TODO;
-    id: number
+    id: Todo["id"]
 };
 
 export type todoActionsTypes = AddTodo | ToggleTodo;

@@ -1,7 +1,6 @@
-import { TodoState } from '../../store/todos/types';
-import { Dispatch } from 'redux';
+import { TodoState, Todo } from '../../store/todos/types';
 
 export interface Props {
-    dispatch: Dispatch;
-    todos: TodoState;
+    todos: TodoState["todos"];
+    toggleTodo: (id: Todo["id"]) => void;
 };
