@@ -1,5 +1,5 @@
 import { TodoState, todoActionsTypes } from "./types";
-import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO } from "./constants";
+import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO, CHANGE_TODO } from "./constants";
 
 const initialState: TodoState = {
 	todos: []
@@ -26,6 +26,13 @@ const todos = (state = initialState, action: todoActionsTypes): TodoState => {
 				...state,
 				todos: state.todos.filter(todo =>
 					todo.id === action.id ? null : todo
+				)
+		};
+		case CHANGE_TODO:
+			return {
+				...state,
+				todos: state.todos.map(todo =>
+					todo.id === action.id ? { ...todo, name: action.name } : todo
 				)
 		};
 		default:

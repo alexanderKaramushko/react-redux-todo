@@ -2,7 +2,7 @@ import { palette, size } from 'styled-theme';
 import styled, { css } from 'styled-components';
 import { IconProps } from './types';
 
-const Icon = styled.div<IconProps>`
+export const Icon = styled.div<IconProps>`
     width: ${({ width }) => `${width}px` || size('iconMedium')};
     height: ${({ height }) => `${height}px` || size('iconMedium')};
 
@@ -40,5 +40,3 @@ const Icon = styled.div<IconProps>`
         `
     }
 `;
-
-export default Icon;

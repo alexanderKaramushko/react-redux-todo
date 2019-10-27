@@ -4,7 +4,7 @@ import { AppState } from '../../store';
 import { TodoState, Todo } from '../../store/todos/types';
 import { FiltersState } from '../../store/filters/types';
 import { VisibilityFilters } from '../../store/filters/constants';
-import { toggleTodo, removeTodo } from '../../store/todos/actions';
+import { toggleTodo, removeTodo, changeTodo } from '../../store/todos/actions';
 import { Dispatch } from 'redux';
 
 const mapStateToProps = (state: AppState) => {
@@ -28,7 +28,8 @@ const mapStateToProps = (state: AppState) => {
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     toggleTodo: (id: Todo["id"]) => dispatch(toggleTodo(id)),
-    removeTodo: (id: Todo["id"]) => dispatch(removeTodo(id))
+    removeTodo: (id: Todo["id"]) => dispatch(removeTodo(id)),
+    changeTodo: (id: Todo["id"], name: string) => dispatch(changeTodo(id, name)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

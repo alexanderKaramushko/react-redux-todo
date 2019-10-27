@@ -9,7 +9,7 @@ const StyledList = styled.ul`
 `;
 
 const List = (props: Props) => {
-    const { todos, toggleTodo, removeTodo } = props;
+    const { todos, toggleTodo, removeTodo, changeTodo } = props;
 
     return (
         <StyledList>
@@ -18,6 +18,7 @@ const List = (props: Props) => {
                     todo={todo} 
                     onClick={() => toggleTodo(todo.id)}
                     onRemove={() => removeTodo(todo.id)}
+                    onNameChange={(name: string) => changeTodo(todo.id, name)}
                     key={todo.id} 
                 />
             )}

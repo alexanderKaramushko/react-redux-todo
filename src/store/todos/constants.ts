@@ -1,9 +1,11 @@
 const ADD_TODO = 'ADD_TODO';
 const TOGGLE_TODO = 'TOGGLE_TODO';
 const REMOVE_TODO = 'REMOVE_TODO';
+const CHANGE_TODO = 'CHANGE_TODO';
 
 export {
     ADD_TODO,
     TOGGLE_TODO,
-    REMOVE_TODO
+    REMOVE_TODO,
+    CHANGE_TODO
 };

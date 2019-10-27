@@ -16,7 +16,7 @@ const Linethrough = styled.span`
     transform: translateY(-50%);
 `;
 
-const Label = (props: Props) => {
+export const Label = (props: Props) => {
     const { name, completed } = props;
 
     return (
@@ -42,5 +42,3 @@ const Label = (props: Props) => {
         </StyledLabel>
     );
 };
-
-export default Label;
