@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import TodoList from '../../components/TodoList/TodoList';
+import List from '../../components/organisms/List';
 import { AppState } from '../../store';
 import { TodoState, Todo } from '../../store/todos/types';
 import { FiltersState } from '../../store/filters/types';
 import { VisibilityFilters } from '../../store/filters/constants';
-import { toggleTodo } from '../../store/todos/actions';
+import { toggleTodo, removeTodo } from '../../store/todos/actions';
 import { Dispatch } from 'redux';
 
 const mapStateToProps = (state: AppState) => {
@@ -27,7 +27,8 @@ const mapStateToProps = (state: AppState) => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-    toggleTodo: (id: Todo["id"]) => dispatch(toggleTodo(id))
+    toggleTodo: (id: Todo["id"]) => dispatch(toggleTodo(id)),
+    removeTodo: (id: Todo["id"]) => dispatch(removeTodo(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, mapDispatchToProps)(List);

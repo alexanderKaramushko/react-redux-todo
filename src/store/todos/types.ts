@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from "./constants";
+import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO } from "./constants";
 
 export interface Todo {
     id: number;
@@ -20,4 +20,9 @@ export interface ToggleTodo {
     id: Todo["id"]
 };
 
-export type todoActionsTypes = AddTodo | ToggleTodo;
+export interface RemoveTodo {
+    type: typeof REMOVE_TODO;
+    id: Todo["id"]
+};
+
+export type todoActionsTypes = AddTodo | ToggleTodo | RemoveTodo;
