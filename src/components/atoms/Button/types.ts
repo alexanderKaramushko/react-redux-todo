@@ -5,3 +5,7 @@ export interface Props {
     onClick: () => void;
     children: ReactNode;
 }
+
+export interface ButtonProps {
+    active?: boolean;
+};

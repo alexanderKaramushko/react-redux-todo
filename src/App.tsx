@@ -1,16 +1,22 @@
-import './App.css';
-import React, { Fragment } from 'react';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from './components/themes/default';
+import GlobalStyle from './components/themes/GlobalStyle';
 import AddTodo from './containers/AddTodo';
-import TodoList from './containers/TodoList';
-import Footer from './components/Footer/Footer';
+import Main from './components/organisms/Main';
+import Footer from './components/organisms/Footer';
 
 const App: React.FC = () => {
   return (
-    <Fragment>
-      <AddTodo />
-      <TodoList />
-      <Footer />
-    </Fragment>
+    <ThemeProvider theme={theme}>
+      	<>
+			<GlobalStyle />
+			<AddTodo />
+			<Main />
+			<Footer />
+		</>
+    </ThemeProvider>
   );
-}
+};
+
 export default App;
